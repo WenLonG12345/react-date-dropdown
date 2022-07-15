@@ -2,8 +2,8 @@ import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { Button } from './Button';
+import design from './storybook-utils/design';
 
-// More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
   title: 'Example/Button',
   component: Button,
@@ -22,13 +22,11 @@ Primary.args = {
   primary: true,
   label: 'Button',
   loading: false,
+  disabled: false,
 };
 
 Primary.parameters = {
-  design: {
-    type: 'figma',
-    url: 'https://www.figma.com/file/L5pyPLReVeueLXcxX8hak9/Strateos?node-id=42%3A2772',
-  },
+  ...design('3%3A210'),
 };
 
 export const Secondary = Template.bind({});
@@ -36,10 +34,7 @@ Secondary.args = {
   label: 'Button',
 };
 Secondary.parameters = {
-  design: {
-    type: 'figma',
-    url: 'https://www.figma.com/file/L5pyPLReVeueLXcxX8hak9/Strateos?node-id=42%3A2939',
-  },
+  ...design('3%3A210'),
 };
 
 export const Large = Template.bind({});
@@ -48,10 +43,7 @@ Large.args = {
   label: 'Button',
 };
 Large.parameters = {
-  design: {
-    type: 'figma',
-    url: 'https://www.figma.com/file/L5pyPLReVeueLXcxX8hak9/Strateos?node-id=42%3A2640',
-  },
+  ...design('3%3A210'),
 };
 
 export const Small = Template.bind({});
@@ -60,8 +52,5 @@ Small.args = {
   label: 'Button',
 };
 Small.parameters = {
-  design: {
-    type: 'figma',
-    url: 'https://www.figma.com/file/L5pyPLReVeueLXcxX8hak9/Strateos?node-id=42%3A2784',
-  },
+  ...design('3%3A210'),
 };

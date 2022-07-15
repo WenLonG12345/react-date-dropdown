@@ -1,3 +1,5 @@
+@import "../shared/_colors";
+
 .button {
   font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 700;
@@ -7,14 +9,18 @@
   display: inline-block;
   line-height: 17px;
   font-size: 16px;
+  color: $light-primary;
+  background-color: $lilac-primary;
 
-  &-primary {
-    color: #fff;
-    background-color: rgba(50, 120, 255, 1);
+  &:hover {
+    background-color: $lilac-secondary;
   }
-  &-secondary {
-    color: rgba(50, 120, 255, 1);
-    background-color: transparent;
+  &:active {
+    background-color: $lilac-dark;
+  }
+  &:disabled {
+    color: $light-secondary;
+    background-color: $lilac-light;
   }
   &-small {
     padding: 4px 16px;
