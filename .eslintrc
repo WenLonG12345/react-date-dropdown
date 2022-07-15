@@ -1,0 +1,80 @@
+{
+  "extends": ["prettier", "react-app", "react-app/jest"],
+  "env": {
+    "browser": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "plugins": ["prettier", "react", "react-hooks", "@typescript-eslint"],
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx", ""]
+      }
+    }
+  },
+  "overrides": [
+    {
+      "files": [
+        "**/*.stories.*"
+      ],
+      "rules": {
+        "import/no-anonymous-default-export": "off"
+      }
+    }
+  ],
+  "rules": {
+    "import/no-unresolved": [1, {"ignore": [""] }],
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never",
+        "": "never"
+      }
+    ],
+    "prettier/prettier": [
+      "warn",
+      {
+        "singleQuote": true
+      }
+    ],
+    "no-shadow": "off",
+    "@typescript-eslint/no-shadow": ["error"],
+    "react/jsx-filename-extension": [1, { "extensions": [".tsx", ".ts"] }],
+    "indent": ["error", 2, { "SwitchCase": 1, "ObjectExpression": 1, "ImportDeclaration": 1 }],
+    "jsx-quotes": ["error", "prefer-double"],
+    "quotes": ["error", "single", { "allowTemplateLiterals": true }],
+    "@typescript-eslint/explicit-function-return-type": 0,
+    "@typescript-eslint/indent": ["error", 2],
+    "no-case-declarations": 0,
+    "@typescript-eslint/camelcase": 0,
+    "no-trailing-spaces": ["error"],
+    "curly": ["error"],
+    "eqeqeq": ["error"],
+    "no-alert": ["error"],
+    "no-eq-null": ["error"],
+    "jsx-a11y/anchor-is-valid": ["error"],
+    "@typescript-eslint/no-unused-vars": ["error", { "ignoreRestSiblings": true, "argsIgnorePattern": "^_", "args": "all" }],
+    "@typescript-eslint/no-explicit-any": ["error", { "ignoreRestArgs": true }],
+    "object-curly-spacing": ["error", "always"],
+    "space-before-blocks": ["error"],
+    "arrow-spacing": ["error"],
+    "array-callback-return": "error",
+    "spaced-comment": ["error", "always"],
+    "no-console": "error",
+    "no-mixed-operators": "error",
+    "max-len": ["error", { "code": 200 }],
+    "one-var": ["error", "never"],
+    "no-unreachable": "error",
+    "semi": "error",
+    "react-hooks/exhaustive-deps": "error",
+    "default-param-last": "off"
+  },
+  "ignorePatterns": ["node_modules", "*.d.ts", "*.test.ts", "service-worker.js"]
+}

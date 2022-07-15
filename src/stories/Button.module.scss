@@ -1,0 +1,43 @@
+.button {
+  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  border: 0;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 17px;
+  font-size: 16px;
+
+  &-primary {
+    color: #fff;
+    background-color: rgba(50, 120, 255, 1);
+  }
+  &-secondary {
+    color: rgba(50, 120, 255, 1);
+    background-color: transparent;
+  }
+  &-small {
+    padding: 4px 16px;
+  }
+  &-medium {
+    padding: 8px 16px;
+  }
+  &-large {
+    padding: 10px 16px;
+  }
+  & span {
+    display: none;
+  }
+  &-loading {
+    & span {
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      background: url(./assets/loading.svg) no-repeat;
+      background-position: center;
+      margin-right: 10px;
+      vertical-align: text-top;
+    }
+  }
+
+}
