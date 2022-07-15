@@ -1,4 +1,4 @@
-export default function design(nideId: string) {
+export default function design(nideId) {
   return {
     design: {
       type: 'figma',
