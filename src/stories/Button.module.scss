@@ -10,7 +10,14 @@
   line-height: 17px;
   font-size: 16px;
   color: $light-primary;
-  background-color: $lilac-primary;
+
+  &-primary {
+    background-color: $lilac-primary;
+  }
+
+  &-secondary {
+    background-color: $dark-secondary;
+  }
 
   &:hover {
     background-color: $lilac-secondary;

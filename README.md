@@ -8,4 +8,41 @@
 
 The Storybook design system tutorial is a subset of the full [Storybook design system](https://github.com/storybookjs/design-system/), created as a learning resource for those interested in learning how to write and publish a design system using best in practice techniques.
 
-Learn more in [Storybook tutorials](https://storybook.js.org/tutorials/).
+## Developing components
+
+Run developing components in storybook mode:
+
+  > yarn storybook
+
+or
+
+  > npm run storybook
+
+And it will run storybook on ```http://localhost:6006```
+
+## Deploy components
+
+After developing we can run deploy component library to npm automatically using [Github actions](https://github.com/4-life/storybook-boilerplate/blob/master/.github/workflows/push.yml). Although storybook docs says that we can deploy it using [just Babel](https://storybook.js.org/tutorials/design-systems-for-developers/react/en/distribute/) we can't do that if our project contains SCSS, Typescript, etc. That's why we build components by [Webpack](https://github.com/4-life/storybook-boilerplate/webpack.config.ts)
+
+## Using component library
+
+After component library is deployed on npm we can use it:
+
+  > yarn add @4life/storybook-boilerplate
+
+or
+
+  > npm i @4life/storybook-boilerplate
+
+And then import the component to the app:
+
+```
+import { Button } from '@4life/storybook-boilerplate';
+
+function Component() {
+  return (
+    <Button primary loading />
+  );
+}
+```
+
