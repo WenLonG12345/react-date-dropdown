@@ -9,6 +9,9 @@ interface ButtonProps {
   onClick?: () => void;
   loading?: boolean;
   disabled?: boolean;
+  badge?: boolean;
+  IconLeft?: typeof React.Component;
+  IconRight?: typeof React.Component;
 }
 
 export const Button = ({
@@ -17,6 +20,10 @@ export const Button = ({
   backgroundColor,
   label,
   loading,
+  badge,
+  IconLeft,
+  IconRight,
+  disabled,
   ...props
 }: ButtonProps) => {
   const mode = primary ? styles['button-primary'] : styles['button-secondary'];
@@ -28,10 +35,16 @@ export const Button = ({
         ' '
       )}
       style={{ backgroundColor }}
+      disabled={disabled}
       {...props}
     >
-      <span className="loading" data-testid="loading" />
-      {label}
+      {IconLeft ? <IconLeft className={styles['button-iconLeft']} /> : null}
+      <span className={styles['button-iconLoading']} data-testid="loading" />
+      <span className={styles['button-label']}>{label}</span>
+      {IconRight ? <IconRight className={styles['button-iconRight']} /> : null}
+      {badge && !disabled ? (
+        <span className={styles['button-badge']} data-testid="badge" />
+      ) : null}
     </button>
   );
 };

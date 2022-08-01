@@ -2,7 +2,23 @@ import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { Button } from './Button';
+import { ReactComponent as ArrowDownIcon } from './assets/arrowDown.svg';
+import { ReactComponent as EmailIcon } from './assets/email.svg';
 import design from '../../.storybook/utils';
+
+const icons = { ArrowDownIcon, EmailIcon, 'No icon': undefined };
+const iconsSelect = {
+  options: Object.keys(icons),
+  mapping: icons,
+  control: {
+    type: 'select',
+    labels: {
+      ArrowDownIcon: 'Down Icon',
+      EmailIcon: 'Email Icon',
+      'No icon': 'No icon',
+    },
+  },
+};
 
 export default {
   title: 'Example/Button',
@@ -10,6 +26,8 @@ export default {
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {
     backgroundColor: { control: 'color' },
+    IconLeft: iconsSelect,
+    IconRight: iconsSelect,
   },
 } as ComponentMeta<typeof Button>;
 
@@ -23,6 +41,7 @@ Primary.args = {
   label: 'Button',
   loading: false,
   disabled: false,
+  badge: false,
 };
 
 Primary.parameters = {
@@ -32,9 +51,12 @@ Primary.parameters = {
 export const Secondary = Template.bind({});
 Secondary.args = {
   label: 'Button',
+  loading: false,
+  disabled: false,
+  badge: false,
 };
 Secondary.parameters = {
-  ...design('3%3A210'),
+  ...design('8%3A219'),
 };
 
 export const Large = Template.bind({});
