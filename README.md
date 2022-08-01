@@ -46,3 +46,6 @@ function Component() {
 }
 ```
 
+## Components documentation
+
+You can find deployed storybook [here](https://storybook.4life.work/)
