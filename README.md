@@ -22,7 +22,12 @@ And it will run storybook on ```http://localhost:6006```
 
 ## Deploy components
 
-After developing we can run deploy component library to npm automatically using [Github actions](https://github.com/4-life/storybook-boilerplate/blob/master/.github/workflows/push.yml). Although storybook docs says that we can deploy it using [just Babel](https://storybook.js.org/tutorials/design-systems-for-developers/react/en/distribute/) we can't do that if our project contains SCSS, Typescript, etc. That's why we build components by [Webpack](https://github.com/4-life/storybook-boilerplate/webpack.config.ts)
+After developing we can run deploy component library to npm automatically using [Github actions](https://github.com/4-life/storybook-boilerplate/blob/master/.github/workflows/push.yml). Although storybook docs says that we can deploy it using [just Babel](https://storybook.js.org/tutorials/design-systems-for-developers/react/en/distribute/) we can't do that if our project contains SCSS, Typescript, etc. That's why we build components by [Webpack](https://github.com/4-life/storybook-boilerplate/blob/master/webpack.config.ts)
+
+
+## Components documentation
+
+You can find deployed storybook [here](https://storybook.4life.work/)
 
 ## Using component library
 
@@ -46,6 +51,3 @@ function Component() {
 }
 ```
 
-## Components documentation
-
-You can find deployed storybook [here](https://storybook.4life.work/)
