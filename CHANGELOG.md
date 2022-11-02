@@ -1,3 +1,15 @@
+# v0.1.7 (Fri Aug 05 2022)
+
+#### ⚠️ Pushed to `master`
+
+- Fix README ([@4-life](https://github.com/4-life))
+
+#### Authors: 1
+
+- Pavel ([@4-life](https://github.com/4-life))
+
+---
+
 # v0.1.6 (Mon Aug 01 2022)
 
 #### ⚠️ Pushed to `master`
