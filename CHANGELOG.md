@@ -1,3 +1,16 @@
+# v0.1.8 (Wed Nov 02 2022)
+
+#### ⚠️ Pushed to `master`
+
+- Merge branch 'master' of github.com:4-life/storybook-boilerplate ([@4-life](https://github.com/4-life))
+- Separate components, controls and pages ([@4-life](https://github.com/4-life))
+
+#### Authors: 1
+
+- Pavel Ovchinnikov ([@4-life](https://github.com/4-life))
+
+---
+
 # v0.1.7 (Fri Aug 05 2022)
 
 #### ⚠️ Pushed to `master`
