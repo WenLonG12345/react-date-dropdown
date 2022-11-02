@@ -21,7 +21,7 @@ const iconsSelect = {
 };
 
 export default {
-  title: 'Example/Button',
+  title: 'Controls/Button',
   component: Button,
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {
