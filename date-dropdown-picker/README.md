@@ -2,6 +2,8 @@
 
 [![Version](https://img.shields.io/npm/v/react-date-dropdown-picker.svg)](https://www.npmjs.com/package/react-date-dropdown-picker)
 
+![Image](../screenshot.png)
+
 #### Install
 
 ```sh
