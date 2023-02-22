@@ -10,7 +10,7 @@ function App() {
     <div className="main-container">
       <div className="pageTitle">Welcome To</div>
       <div className="pageTitle" style={{ marginBottom: "20px" }}>
-        react-date-dropdown-picker
+        react-date-dropdown
       </div>
       <div className="date-container">
         <div className="row">
