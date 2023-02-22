@@ -1,22 +1,22 @@
-# Welcome to react-date-dropdown-picker 👋
+# Welcome to react-date-dropdown 👋
 
-[![Version](https://img.shields.io/npm/v/react-date-dropdown-picker.svg)](https://www.npmjs.com/package/react-date-dropdown-picker)
+[![Version](https://img.shields.io/npm/v/react-date-dropdown.svg)](https://www.npmjs.com/package/react-date-dropdown)
 
 ![Image](screenshot.png)
 
 #### Install
 
 ```sh
-npm install react-date-dropdown-picker
-yarn add react-date-dropdown-picker
+npm install react-date-dropdown
+yarn add react-date-dropdown
 ```
 [Demo Site](https://react-date-dropdown-picker.vercel.app/)
 
 ---
 
-#### DateDropdownPicker
+#### DateDropdown
 ```js
-interface IDateDropdownPicker {
+interface IDateDropdown {
   /** Required. Callback for date change: Format: YYYY-MM-DD */
   onDateChange: (date: string) => void;
   /** Default Date set: Format: YYYY-MM-DD */
@@ -41,9 +41,9 @@ interface IDateDropdownPicker {
   yearEnd?: number;
 }
 
-import DateDropdownPicker from 'react-date-dropdown-picker';
+import DateDropdownPicker from 'react-date-dropdown';
 
-<DateDropdownPicker
+<DateDropdown
   onDateChange={() => {}}
 />
 ```
@@ -66,7 +66,7 @@ interface IYearPicker {
   optionClass?: string;
 }
 
-import {YearPicker} from 'react-date-dropdown-picker';
+import {YearPicker} from 'react-date-dropdown';
 
 <YearPicker
   onYearChange={() => {}}
@@ -88,7 +88,7 @@ interface IMonthPicker {
   optionClass?: string;
 }
 
-import {MonthPicker} from 'react-date-dropdown-picker';
+import {MonthPicker} from 'react-date-dropdown';
 
 <MonthPicker
   onMonthChange={() => {}}
@@ -114,7 +114,7 @@ interface IDayPicker {
   optionClass?: string;
 }
 
-import {DayPicker} from 'react-date-dropdown-picker';
+import {DayPicker} from 'react-date-dropdown';
 
 <DayPicker
   onDayChange={() => {}}

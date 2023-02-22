@@ -1,25 +1,13 @@
-# Welcome to react-date-dropdown-picker 👋
+export enum DropdownComponent {
+  year = "year",
+  month = "month",
+  day = "day",
+}
 
-[![Version](https://img.shields.io/npm/v/react-date-dropdown-picker.svg)](https://www.npmjs.com/package/react-date-dropdown-picker)
-
-![Image](../screenshot.png)
-
-#### Install
-
-```sh
-npm install react-date-dropdown-picker
-yarn add react-date-dropdown-picker
-```
-[Demo Site](https://react-date-dropdown-picker.vercel.app/)
-
----
-
-#### DateDropdownPicker
-```js
-interface IDateDropdownPicker {
+export interface IDateDropdown {
   /** Required. Callback for date change: Format: YYYY-MM-DD */
   onDateChange: (date: string) => void;
-  /** Default Date set: Format: YYYY-MM-DD */
+  /** Default date: Format: YYYY-MM-DD */
   defaultDate?: string;
 
   /** className for container */
@@ -41,15 +29,7 @@ interface IDateDropdownPicker {
   yearEnd?: number;
 }
 
-import DateDropdownPicker from 'react-date-dropdown-picker';
-
-<DateDropdownPicker
-  onDateChange={() => {}}
-/>
-```
-#### YearPicker
-```js
-interface IYearPicker {
+export interface IYearPicker {
   /** Required. Callback for year change: Format: YYYY */
   onYearChange: (year: number) => void;
   /** Default year: Format: YYYY */
@@ -66,16 +46,7 @@ interface IYearPicker {
   optionClass?: string;
 }
 
-import {YearPicker} from 'react-date-dropdown-picker';
-
-<YearPicker
-  onYearChange={() => {}}
-/>
-```
-
-#### MonthPicker
-```js
-interface IMonthPicker {
+export interface IMonthPicker {
   /** Required. Callback for month change: Format: MM */
   onMonthChange: (month: number) => void;
   /** Default year: Format: MM */
@@ -88,16 +59,7 @@ interface IMonthPicker {
   optionClass?: string;
 }
 
-import {MonthPicker} from 'react-date-dropdown-picker';
-
-<MonthPicker
-  onMonthChange={() => {}}
-/>
-```
-
-#### DayPicker
-```js
-interface IDayPicker {
+export interface IDayPicker {
   /** Required. Callback for day change: Format: DD */
   onDayChange: (day: number) => void;
   /** Default year - 1991. Used to calculate number of days */
@@ -113,14 +75,3 @@ interface IDayPicker {
   /** className for <option/> */
   optionClass?: string;
 }
-
-import {DayPicker} from 'react-date-dropdown-picker';
-
-<DayPicker
-  onDayChange={() => {}}
-/>
-```
----
-#### Show your support
-
-Give a ⭐️ if this project helped you!

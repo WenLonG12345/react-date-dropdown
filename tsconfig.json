@@ -16,6 +16,6 @@
     "noEmit": true,
     "jsx": "react-jsx"
   },
-  "include": ["src", "date-dropdown-picker"],
+  "include": ["src", "date-dropdown"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

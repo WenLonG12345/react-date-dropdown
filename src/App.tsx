@@ -3,7 +3,7 @@ import DateDropdownPicker, {
   YearPicker,
   MonthPicker,
   DayPicker,
-} from "react-date-dropdown-picker";
+} from "react-date-dropdown";
 
 function App() {
   return (
