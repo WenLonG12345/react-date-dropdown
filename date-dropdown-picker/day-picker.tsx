@@ -1,15 +1,6 @@
 import React from "react";
-import { getDaysInMonth } from "./helpers";
-
-interface IDayPicker {
-  year: number;
-  month: number;
-  day: number;
-  onDayChange: (day: number) => void;
-  placeholder?: string;
-  selectClass?: string;
-  optionClass?: string;
-}
+import { IDayPicker } from "./types";
+import { getDaysInMonth } from "./utils";
 
 const DayPicker: React.FC<IDayPicker> = ({
   day,

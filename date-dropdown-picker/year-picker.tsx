@@ -1,14 +1,5 @@
 import React from "react";
-
-interface IYearPicker {
-  selectedYear: number;
-  onYearChange: (year: number) => void;
-  placeholder?: string;
-  start?: number;
-  end?: number;
-  selectClass?: string;
-  optionClass?: string;
-}
+import { IYearPicker } from "./types";
 
 const YearPicker: React.FC<IYearPicker> = ({
   selectedYear,

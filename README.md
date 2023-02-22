@@ -1,13 +1,22 @@
-export enum DropdownComponent {
-  year = "year",
-  month = "month",
-  day = "day",
-}
+# Welcome to react-date-dropdown-picker 👋
 
-export interface IDateDropdownPicker {
+[![Version](https://img.shields.io/npm/v/react-date-dropdown-picker.svg)](https://www.npmjs.com/package/react-date-dropdown-picker)
+
+#### Install
+
+```sh
+npm install react-date-dropdown-picker
+yarn add react-date-dropdown-picker
+```
+
+---
+
+#### DateDropdownPicker
+```js
+interface IDateDropdownPicker {
   /** Required. Callback for date change: Format: YYYY-MM-DD */
   onDateChange: (date: string) => void;
-  /** Default date: Format: YYYY-MM-DD */
+  /** Default Date set: Format: YYYY-MM-DD */
   defaultDate?: string;
 
   /** className for container */
@@ -29,7 +38,15 @@ export interface IDateDropdownPicker {
   yearEnd?: number;
 }
 
-export interface IYearPicker {
+import DateDropdownPicker from 'react-date-dropdown-picker';
+
+<DateDropdownPicker
+  onDateChange={() => {}}
+/>
+```
+#### YearPicker
+```js
+interface IYearPicker {
   /** Required. Callback for year change: Format: YYYY */
   onYearChange: (year: number) => void;
   /** Default year: Format: YYYY */
@@ -46,7 +63,16 @@ export interface IYearPicker {
   optionClass?: string;
 }
 
-export interface IMonthPicker {
+import {YearPicker} from 'react-date-dropdown-picker';
+
+<YearPicker
+  onYearChange={() => {}}
+/>
+```
+
+#### MonthPicker
+```js
+interface IMonthPicker {
   /** Required. Callback for month change: Format: MM */
   onMonthChange: (month: number) => void;
   /** Default year: Format: MM */
@@ -59,7 +85,16 @@ export interface IMonthPicker {
   optionClass?: string;
 }
 
-export interface IDayPicker {
+import {MonthPicker} from 'react-date-dropdown-picker';
+
+<MonthPicker
+  onMonthChange={() => {}}
+/>
+```
+
+#### DayPicker
+```js
+interface IDayPicker {
   /** Required. Callback for day change: Format: DD */
   onDayChange: (day: number) => void;
   /** Default year - 1991. Used to calculate number of days */
@@ -75,3 +110,14 @@ export interface IDayPicker {
   /** className for <option/> */
   optionClass?: string;
 }
+
+import {DayPicker} from 'react-date-dropdown-picker';
+
+<DayPicker
+  onDayChange={() => {}}
+/>
+```
+
+#### Show your support
+
+Give a ⭐️ if this project helped you!

@@ -1,13 +1,6 @@
 import React from "react";
-import { monthByNumber } from "./helpers";
-
-interface IMonthPicker {
-  selectedMonth: number | undefined;
-  onMonthChange: (month: number) => void;
-  placeholder?: string;
-  selectClass?: string;
-  optionClass?: string;
-}
+import { IMonthPicker } from "./types";
+import { monthByNumber } from "./utils";
 
 const MonthPicker: React.FC<IMonthPicker> = ({
   selectedMonth,
