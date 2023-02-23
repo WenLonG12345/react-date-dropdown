@@ -1,5 +1,5 @@
 import React from "react";
-import { IMonthPicker } from "./types";
+import { IMonthPicker } from "../types";
 import { monthByNumber } from "./utils";
 
 const MonthPicker: React.FC<IMonthPicker> = ({
@@ -10,13 +10,13 @@ const MonthPicker: React.FC<IMonthPicker> = ({
   optionClass,
 }) => {
   const renderMonthOptions = () => {
-    let months = [];
+    let months: string[] = [];
     let month = 12;
     for (let i = 0; i <= month; ++i) {
       months.push(monthByNumber[i]);
     }
 
-    const monthOptions = [];
+    const monthOptions: JSX.Element[] = [];
     monthOptions.push(
       <option value={-1} key={-1} disabled className={optionClass}>
         {placeholder ? placeholder : ""}

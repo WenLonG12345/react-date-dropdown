@@ -1,5 +1,5 @@
 import React from "react";
-import { IDayPicker } from "./types";
+import { IDayPicker } from "../types";
 import { getDaysInMonth } from "./utils";
 
 const DayPicker: React.FC<IDayPicker> = ({
@@ -14,7 +14,7 @@ const DayPicker: React.FC<IDayPicker> = ({
   const renderDayOptions = () => {
     let days = month ? getDaysInMonth(year, month) : 31;
 
-    const dayOptions = [];
+    const dayOptions: JSX.Element[] = [];
     dayOptions.push(
       <option value={-1} key={-1} disabled selected className={optionClass}>
         {placeholder ? placeholder : ""}

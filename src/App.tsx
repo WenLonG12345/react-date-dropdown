@@ -1,9 +1,6 @@
 import "./App.css";
-import DateDropdownPicker, {
-  YearPicker,
-  MonthPicker,
-  DayPicker,
-} from "react-date-dropdown";
+import React from 'react';
+import { DateDropdown, YearPicker, MonthPicker, DayPicker } from "./lib";
 
 function App() {
   return (
@@ -15,7 +12,7 @@ function App() {
       <div className="date-container">
         <div className="row">
           <div>Date Dropdown Picker</div>
-          <DateDropdownPicker
+          <DateDropdown
             onDateChange={() => {}}
             defaultDate="1997-01-30"
             yearStart={1996}

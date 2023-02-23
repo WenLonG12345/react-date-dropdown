@@ -14,7 +14,7 @@ const YearPicker: React.FC<IYearPicker> = ({
     const startYear = start || 1900;
     const endYear = end || new Date().getFullYear();
 
-    const years = [];
+    const years: number[] = [];
     if (startYear <= endYear) {
       for (let i = startYear; i <= endYear; ++i) {
         years.push(i);
@@ -28,7 +28,7 @@ const YearPicker: React.FC<IYearPicker> = ({
     // show latest year first
     years.reverse();
 
-    const yearOptions = [];
+    const yearOptions: JSX.Element[] = [];
     yearOptions.push(
       <option value={-1} key={-1} disabled selected className={optionClass}>
         {placeholder ? placeholder : ""}
