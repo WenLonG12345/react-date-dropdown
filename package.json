@@ -1,6 +1,6 @@
 {
   "name": "react-date-dropdown",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "React Date Dropdown",
   "main": "./src/lib",
   "types": "./src/lib/types.ts",
