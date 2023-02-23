@@ -1,6 +1,6 @@
 {
   "name": "react-date-dropdown",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "React Date Dropdown",
   "main": "index.tsx",
   "types": "module",
