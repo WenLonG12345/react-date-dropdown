@@ -1,5 +1,5 @@
 import React from "react";
-import { IYearPicker } from "./types";
+import { IYearPicker } from "../types";
 
 const YearPicker: React.FC<IYearPicker> = ({
   selectedYear,

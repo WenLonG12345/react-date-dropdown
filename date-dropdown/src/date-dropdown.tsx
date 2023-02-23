@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import DayPicker from "./day-picker";
 import { zeroPad } from "./utils";
 import MonthPicker from "./month-picker";
-import { IDateDropdown } from "./types";
+import { IDateDropdown } from "../types";
 import YearPicker from "./year-picker";
 
 const DateDropdown: React.FC<IDateDropdown> = ({
