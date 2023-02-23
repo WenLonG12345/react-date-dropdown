@@ -609,10 +609,10 @@ postcss@^8.4.21:
     picocolors "^1.0.0"
     source-map-js "^1.0.2"
 
-react-date-dropdown@^0.0.1:
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/react-date-dropdown/-/react-date-dropdown-0.0.1.tgz#b8666bafb5308948e17e8bd8c0d943a143da4dae"
-  integrity sha512-uJEd6Xc04sVeaIrWCDsGOU6kUgn68F4IXsgJ5knhua1IghlcoJhPGX+4Blfzk9MhbVzraT7wSWGFfEYzDmHoRQ==
+react-date-dropdown@^0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/react-date-dropdown/-/react-date-dropdown-0.0.3.tgz#3e4b678bf608f5f5e6219a832071fc8a4d4b9bf9"
+  integrity sha512-PEEJp5MxuLKUzcndm3FLo5zQZ8c3hoDu7luqzEd/Yi7X9N9yywBMLdAEnS3KQ7BS5yjhcTMGM8Lp4akNKzhYyw==
 
 react-dom@^18.2.0:
   version "18.2.0"
