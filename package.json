@@ -2,8 +2,8 @@
   "name": "react-date-dropdown",
   "version": "0.0.5",
   "description": "React Date Dropdown",
-  "main": "index.tsx",
-  "types": "module",
+  "main": "./src/lib",
+  "types": "./src/lib/types.ts",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
