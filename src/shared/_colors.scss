@@ -1,0 +1,16 @@
+@use "sass:color";
+
+$red-primary: #FF003D;
+$light-primary: #fff;
+$light-secondary: color.adjust($light-primary, $alpha: -0.5);
+$dark-primary: #000;
+$dark-secondary: #060211;
+
+$lilac-primary: #8338EC;
+$lilac-secondary: #692DBD;
+$lilac-dark: #4F228E;
+$lilac-light: color.adjust($lilac-primary, $alpha: -0.5);
+
+$grey-primary: #383541;
+$grey-secondary: #514E58;
+$grey-light: color.adjust($dark-primary, $alpha: -0.5);

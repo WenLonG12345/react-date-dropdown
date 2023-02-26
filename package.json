@@ -1,33 +1,90 @@
 {
   "name": "react-date-dropdown",
   "version": "0.0.6",
-  "description": "React Date Dropdown",
-  "main": "./src/lib",
-  "types": "./src/lib/types.ts",
-  "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview"
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^13.3.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/jest": "^27.5.2",
+    "@types/node": "^18.0.6",
+    "@types/react": "^18.0.15",
+    "@types/react-dom": "^18.0.6",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "^5.0.1",
+    "typescript": "^4.7.4",
+    "web-vitals": "^2.1.4"
   },
+  "scripts": {
+    "build": "webpack --mode=production --env production --progress",
+    "storybook": "start-storybook -p 6006 -s public",
+    "build-storybook": "build-storybook -s public",
+    "release": "auto shipit --base-branch=master",
+    "test-storybook": "test-storybook",
+    "lint": "eslint \"src/**/*.{ts,tsx}\""
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@storybook/addon-actions": "^6.5.9",
+    "@storybook/addon-essentials": "^6.5.9",
+    "@storybook/addon-interactions": "^6.5.9",
+    "@storybook/addon-links": "^6.5.9",
+    "@storybook/builder-webpack5": "^6.5.9",
+    "@storybook/jest": "0.0.10",
+    "@storybook/manager-webpack5": "^6.5.9",
+    "@storybook/node-logger": "^6.5.9",
+    "@storybook/preset-create-react-app": "^4.1.2",
+    "@storybook/preset-scss": "^1.0.3",
+    "@storybook/react": "^6.5.9",
+    "@storybook/test-runner": "^0.4.0",
+    "@storybook/testing-library": "0.0.13",
+    "@types/webpack": "^5.28.0",
+    "@types/webpack-dev-server": "^4.7.2",
+    "@typescript-eslint/eslint-plugin": "^5.30.7",
+    "@typescript-eslint/parser": "^5.30.7",
+    "auto": "^10.37.1",
+    "cross-env": "^7.0.3",
+    "css-loader": "^6.7.1",
+    "eslint": "^8.20.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.30.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "jest": "^27.5.1",
+    "node-sass": "^7.0.1",
+    "prettier": "^2.7.1",
+    "prop-types": "^15.8.1",
+    "sass": "^1.53.0",
+    "sass-loader": "^13.0.2",
+    "storybook-addon-designs": "^6.3.1",
+    "style-loader": "^3.3.1",
+    "ts-loader": "^9.3.1",
+    "ts-node": "^10.9.1",
+    "tsconfig-paths-webpack-plugin": "^3.5.2",
+    "webpack": "^5.73.0",
+    "webpack-cli": "^4.10.0"
+  },
+  "main": "dist/index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/WenLonG12345/react-date-dropdown.git"
   },
   "author": "WenLonG12345",
+  "homepage": "https://github.com/WenLonG12345/react-date-dropdown#readme",
+  "description": "Ready to go Storybook boilerplate",
   "bugs": {
     "url": "https://github.com/WenLonG12345/react-date-dropdown/issues"
-  },
-  "homepage": "https://github.com/WenLonG12345/react-date-dropdown#readme",
-  "dependencies": {
-    "react": "^18.2.0",
-    "react-date-dropdown": "^0.0.3",
-    "react-dom": "^18.2.0"
-  },
-  "devDependencies": {
-    "@types/react": "^18.0.27",
-    "@types/react-dom": "^18.0.10",
-    "@vitejs/plugin-react": "^3.1.0",
-    "typescript": "^4.9.3",
-    "vite": "^4.1.0"
   }
 }

@@ -1,0 +1,104 @@
+@import "../shared/_colors";
+
+.button {
+  position: relative;
+  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  border: 0;
+  border-radius: 4px;
+  cursor: pointer;
+  line-height: 17px;
+  font-size: 16px;
+  color: $light-primary;
+  align-items: center;
+  display: inline-flex;
+
+  &-primary {
+    background-color: $lilac-primary;
+
+    &:hover {
+      background-color: $lilac-secondary;
+    }
+    &:active {
+      background-color: $lilac-dark;
+    }
+    &:disabled,
+    &.button-loading {
+      color: $light-secondary;
+      background-color: $lilac-light;
+    }
+  }
+
+  &-secondary {
+    background-color: $dark-secondary;
+
+    &:hover {
+      background-color: $grey-primary;
+    }
+    &:active {
+      background-color: $grey-secondary;
+    }
+    &:disabled,
+    &.button-loading {
+      color: $light-secondary;
+      background-color: $grey-light;
+    }
+  }
+
+  &-small {
+    padding: 4px 16px;
+  }
+  &-medium {
+    padding: 8px 16px;
+  }
+  &-large {
+    padding: 10px 16px;
+  }
+  &-iconLoading {
+    display: none;
+    width: 16px;
+    height: 16px;
+    background: url(./assets/loading.svg) no-repeat;
+    background-position: center;
+    margin-right: 10px;
+    vertical-align: text-top;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  &-loading {
+    .button-iconLoading {
+      display: inline-block;
+    }
+    .button-badge,
+    .button-iconLeft,
+    .button-iconRight,
+    .button-label
+     {
+      visibility: hidden;
+      opacity: 0;
+    }
+  }
+
+  &-iconLeft {
+    margin-right: 10px;
+  }
+
+  &-iconRight {
+    margin-left: 10px;
+  }
+
+  &-badge {
+    display: inline-block;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    top: -5px;
+    right: -5px;
+    background-color: $red-primary;
+    border-radius: 50%;
+  }
+}
