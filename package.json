@@ -1,9 +1,6 @@
 {
   "name": "react-date-dropdown",
   "version": "0.0.7",
-  "np": {
-    "contents": "dist"
-  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
@@ -90,5 +87,8 @@
   "description": "Ready to go Storybook boilerplate",
   "bugs": {
     "url": "https://github.com/WenLonG12345/react-date-dropdown/issues"
-  }
+  },
+  "files": [
+    "dist"
+  ]
 }
