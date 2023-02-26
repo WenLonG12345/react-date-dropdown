@@ -1,6 +1,22 @@
 import React from "react";
-import { IDayPicker } from "../types";
 import { getDaysInMonth } from "./utils";
+
+interface IDayPicker {
+  /** Required. Callback for day change: Format: DD */
+  onDayChange: (day: number) => void;
+  /** Default year - 1991. Used to calculate number of days */
+  year?: number;
+  /** Default month - 1. Used to calculate number of days*/
+  month?: number;
+  /** Default day */
+  day?: number;
+  /** Placeholder for <select/> input */
+  placeholder?: string;
+  /** className for <select/> */
+  selectClass?: string;
+  /** className for <option/> */
+  optionClass?: string;
+}
 
 const DayPicker: React.FC<IDayPicker> = ({
   day,

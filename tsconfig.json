@@ -1,34 +1,13 @@
 {
   "compilerOptions": {
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
     "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "noFallthroughCasesInSwitch": true,
-    "module": "CommonJS",
-    "target": "ESNext",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "sourceMap": true,
     "jsx": "react",
     "declaration": true,
-    "outDir": "./dist",
-    "paths": {
-      "*": ["./src/*"]
-    },
-    "baseUrl": "./src",
+    "esModuleInterop": true,
+    "outDir": "dist",
+    "target": "es6",
+    "module": "es6",
+    "moduleResolution": "node"
   },
-  "exclude": ["node_modules", "build"],
-  "include": [
-    "./src",
-    "webpack.config.ts"
-  ]
+  "include": ["src"]
 }

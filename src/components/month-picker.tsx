@@ -1,6 +1,18 @@
 import React from "react";
-import { IMonthPicker } from "../types";
 import { monthByNumber } from "./utils";
+
+interface IMonthPicker {
+  /** Required. Callback for month change: Format: MM */
+  onMonthChange: (month: number) => void;
+  /** Default year: Format: MM */
+  selectedMonth?: number;
+  /** Placeholder for <select/> input */
+  placeholder?: string;
+  /** className for <select/> */
+  selectClass?: string;
+  /** className for <option/> */
+  optionClass?: string;
+}
 
 const MonthPicker: React.FC<IMonthPicker> = ({
   selectedMonth,

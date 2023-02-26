@@ -1,5 +1,22 @@
 import React from "react";
-import { IYearPicker } from "../types";
+
+interface IYearPicker {
+  /** Required. Callback for year change: Format: YYYY */
+  onYearChange: (year: number) => void;
+  /** Default year: Format: YYYY */
+  selectedYear?: number;
+  /** Placeholder for <select/> input */
+  placeholder?: string;
+  /** Starting year: Format: YYYY */
+  start?: number;
+  /** Ending year: Format: YYYY */
+  end?: number;
+  /** className for <select/> */
+  selectClass?: string;
+  /** className for <option/> */
+  optionClass?: string;
+}
+
 
 const YearPicker: React.FC<IYearPicker> = ({
   selectedYear,

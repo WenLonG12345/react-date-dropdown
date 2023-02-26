@@ -1,6 +1,9 @@
 {
   "name": "react-date-dropdown",
   "version": "0.0.7",
+  "np": {
+    "contents": "dist"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
@@ -16,7 +19,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "build": "webpack --mode=production --env production --progress",
+    "clean": "rm -rf dist",
+    "build": "npm run clean && tsc && cp package.json README.md ./dist",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
     "release": "auto shipit --base-branch=master",

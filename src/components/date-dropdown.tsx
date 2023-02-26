@@ -2,8 +2,33 @@ import React, { useEffect, useState } from "react";
 import DayPicker from "./day-picker";
 import { zeroPad } from "./utils";
 import MonthPicker from "./month-picker";
-import { IDateDropdown } from "../types";
 import YearPicker from "./year-picker";
+
+interface IDateDropdown {
+  /** Required. Callback for date change: Format: YYYY-MM-DD */
+  onDateChange: (date: string) => void;
+  /** Default date: Format: YYYY-MM-DD */
+  defaultDate?: string;
+
+  /** className for container */
+  containerClass?: string;
+  /** className for <option/> */
+  optionClass?: string;
+  /** className for <select/> */
+  selectClass?: string;
+
+  /** Placeholder for <select/> input */
+  selectPlaceholder?: {
+    year: string;
+    month: string;
+    day: string;
+  };
+  /** Starting year: Format: YYYY */
+  yearStart?: number;
+  /** Ending year: Format: YYYY */
+  yearEnd?: number;
+}
+
 
 const DateDropdown: React.FC<IDateDropdown> = ({
   onDateChange,
