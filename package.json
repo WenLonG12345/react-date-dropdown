@@ -1,7 +1,6 @@
 {
-  "name": "@4life/storybook-boilerplate",
-  "version": "0.1.8",
-  "private": false,
+  "name": "react-date-dropdown",
+  "version": "0.0.6",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
@@ -78,12 +77,14 @@
     "webpack-cli": "^4.10.0"
   },
   "main": "dist/index.js",
-  "repository": "git+https://github.com/4-life/storybook-boilerplate.git",
-  "author": "4life <m@4life.work>",
-  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/WenLonG12345/react-date-dropdown.git"
+  },
+  "author": "WenLonG12345",
+  "homepage": "https://github.com/WenLonG12345/react-date-dropdown#readme",
   "description": "Ready to go Storybook boilerplate",
   "bugs": {
-    "url": "https://github.com/4-life/storybook-boilerplate/issues"
-  },
-  "homepage": "https://github.com/4-life/storybook-boilerplate#readme"
+    "url": "https://github.com/WenLonG12345/react-date-dropdown/issues"
+  }
 }
