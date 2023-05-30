@@ -1,6 +1,6 @@
 import React from "react";
 
-interface IYearPicker {
+export interface IYearPicker {
   /** Required. Callback for year change: Format: YYYY */
   onYearChange: (year: number) => void;
   /** Default year: Format: YYYY */

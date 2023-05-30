@@ -1,7 +1,7 @@
 import React from "react";
 import { monthByNumber } from "./utils";
 
-interface IMonthPicker {
+export interface IMonthPicker {
   /** Required. Callback for month change: Format: MM */
   onMonthChange: (month: number) => void;
   /** Default year: Format: MM */

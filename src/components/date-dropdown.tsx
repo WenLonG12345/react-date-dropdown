@@ -4,7 +4,7 @@ import { zeroPad } from "./utils";
 import MonthPicker from "./month-picker";
 import YearPicker from "./year-picker";
 
-interface IDateDropdown {
+export interface IDateDropdown {
   /** Required. Callback for date change: Format: YYYY-MM-DD */
   onDateChange: (date: string) => void;
   /** Default date: Format: YYYY-MM-DD */
