@@ -14,8 +14,8 @@
   "scripts": {
     "clean": "rm -rf dist",
     "build": "yarn clean && rollup -c",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build --docs",
+    "storybook": "start-storybook -p 6006 -s public",
+    "build-storybook": "build-storybook -s public",
     "serve-storybook": "serve storybook-static",
     "test-storybook": "test-storybook",
     "lint": "eslint \"src/**/*.{ts,tsx}\""
