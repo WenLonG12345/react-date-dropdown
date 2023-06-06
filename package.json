@@ -18,7 +18,8 @@
     "build-storybook": "storybook build",
     "serve-storybook": "serve storybook-static",
     "test-storybook": "test-storybook",
-    "lint": "eslint \"src/**/*.{ts,tsx}\""
+    "lint": "eslint \"src/**/*.{ts,tsx}\"",
+    "release": "release-it"
   },
   "dependencies": {
     "react-scripts": "^5.0.1"
@@ -59,6 +60,7 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-scripts": "^5.0.1",
+    "release-it": "^15.11.0",
     "rollup": "^3.23.0",
     "rollup-plugin-dts": "^5.3.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
@@ -90,5 +92,12 @@
   "bugs": {
     "url": "https://github.com/WenLonG12345/react-date-dropdown/issues"
   },
-  "readme": "ERROR: No README data found!"
+  "release-it": {
+    "github": {
+      "release": true
+    }
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  }
 }
