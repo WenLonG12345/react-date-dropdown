@@ -18,8 +18,7 @@
     "build-storybook": "storybook build",
     "serve-storybook": "serve storybook-static",
     "test-storybook": "test-storybook",
-    "lint": "eslint \"src/**/*.{ts,tsx}\"",
-    "chromatic": "npx chromatic --project-token=chpt_d632015734762a6"
+    "lint": "eslint \"src/**/*.{ts,tsx}\""
   },
   "dependencies": {
     "react-scripts": "^5.0.1"
