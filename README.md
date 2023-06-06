@@ -10,7 +10,7 @@
 npm install react-date-dropdown
 yarn add react-date-dropdown
 ```
-[Demo Site](https://react-date-dropdown-picker.vercel.app/)
+[Demo Site](https://react-date-dropdown.vercel.app/?path=/docs/introduction--docs)
 
 ---
 
