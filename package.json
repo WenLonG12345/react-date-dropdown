@@ -91,11 +91,6 @@
   "bugs": {
     "url": "https://github.com/WenLonG12345/react-date-dropdown/issues"
   },
-  "eslintConfig": {
-    "extends": [
-      "plugin:storybook/recommended"
-    ]
-  },
   "readme": "ERROR: No README data found!",
   "_id": "react-date-dropdown@0.0.15"
 }

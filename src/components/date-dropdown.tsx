@@ -10,7 +10,7 @@ export interface IDateDropdown {
   /** Default date: Format: YYYY-MM-DD */
   defaultDate?: string;
 
-  /** className for container */
+  /** styles for container */
   containerClass?: string;
   /** className for <option/> */
   optionClass?: string;
