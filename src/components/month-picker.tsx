@@ -30,7 +30,7 @@ const MonthPicker: React.FC<IMonthPicker> = ({
 
     const monthOptions: JSX.Element[] = [];
     monthOptions.push(
-      <option value={-1} key={-1} disabled className={optionClass}>
+      <option value={-1} key={-1} disabled selected className={optionClass}>
         {placeholder ? placeholder : ""}
       </option>
     );
