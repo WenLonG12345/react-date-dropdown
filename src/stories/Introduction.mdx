@@ -34,12 +34,18 @@ interface IDateDropdown {
   /** Default Date set: Format: YYYY-MM-DD */
   defaultDate?: string;
 
-  /** className for container */
-  containerClass?: string;
-  /** className for <option/> */
-  optionClass?: string;
-  /** className for <select/> */
-  selectClass?: string;
+  /** ClassName */
+  className?: {
+    container?: string;
+    select?: string;
+    option?: string;
+  };
+  /** Styles */
+  styles?: {
+    container?: React.CSSProperties;
+    select?: React.CSSProperties;
+    option?: React.CSSProperties;
+  };
 
   /** Placeholder for <select/> input */
   selectPlaceholder?: {
@@ -73,10 +79,16 @@ interface IYearPicker {
   start?: number;
   /** Ending year: Format: YYYY */
   end?: number;
-  /** className for <select/> */
-  selectClass?: string;
-  /** className for <option/> */
-  optionClass?: string;
+  /** ClassName */
+  className?: {
+    select?: string;
+    option?: string;
+  };
+  /** Styles */
+  styles?: {
+    select?: React.CSSProperties;
+    option?: React.CSSProperties;
+  };
 }
 
 import {YearPicker} from 'react-date-dropdown';
@@ -96,10 +108,16 @@ interface IMonthPicker {
   selectedMonth?: number;
   /** Placeholder for <select/> input */
   placeholder?: string;
-  /** className for <select/> */
-  selectClass?: string;
-  /** className for <option/> */
-  optionClass?: string;
+  /** ClassName */
+  className?: {
+    select?: string;
+    option?: string;
+  };
+  /** Styles */
+  styles?: {
+    select?: React.CSSProperties;
+    option?: React.CSSProperties;
+  };
 }
 
 import {MonthPicker} from 'react-date-dropdown';
@@ -123,10 +141,16 @@ interface IDayPicker {
   day?: number;
   /** Placeholder for <select/> input */
   placeholder?: string;
-  /** className for <select/> */
-  selectClass?: string;
-  /** className for <option/> */
-  optionClass?: string;
+  /** ClassName */
+  className?: {
+    select?: string;
+    option?: string;
+  };
+  /** Styles */
+  styles?: {
+    select?: React.CSSProperties;
+    option?: React.CSSProperties;
+  };
 }
 
 import {DayPicker} from 'react-date-dropdown';

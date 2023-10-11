@@ -1,5 +1,5 @@
-import React from "react";
-import { monthByNumber } from "./utils";
+import React from 'react';
+import { monthByNumber_EN, monthByNumber_CN, monthByNumber_BM } from './utils';
 
 export interface IMonthPicker {
   /** Required. Callback for month change: Format: MM */
@@ -8,35 +8,79 @@ export interface IMonthPicker {
   selectedMonth?: number;
   /** Placeholder for <select/> input */
   placeholder?: string;
-  /** className for <select/> */
-  selectClass?: string;
-  /** className for <option/> */
-  optionClass?: string;
+  /** ClassName */
+  className?: {
+    select?: string;
+    option?: string;
+  };
+  /** Styles */
+  styles?: {
+    select?: React.CSSProperties;
+    option?: React.CSSProperties;
+  };
+  language?: 'EN' | 'CN' | 'BM';
+  arrayMonthList?: string[];
 }
 
 const MonthPicker: React.FC<IMonthPicker> = ({
   selectedMonth,
   onMonthChange,
-  placeholder = "MM",
-  selectClass,
-  optionClass,
+  placeholder = 'MM',
+  className,
+  styles,
+  language = 'EN',
+  arrayMonthList,
 }) => {
   const renderMonthOptions = () => {
     let months: string[] = [];
     let month = 12;
+
+    let monthList;
+
+    if (arrayMonthList && arrayMonthList.length === 12) {
+      monthList = arrayMonthList;
+    } else {
+      switch (language) {
+        case 'EN':
+          monthList = monthByNumber_EN;
+          break;
+        case 'CN':
+          monthList = monthByNumber_CN;
+          break;
+        case 'BM':
+          monthList = monthByNumber_BM;
+          break;
+        default:
+          monthList = monthByNumber_EN;
+          break;
+      }
+    }
+
     for (let i = 0; i <= month; ++i) {
-      months.push(monthByNumber[i]);
+      months.push(monthList[i]);
     }
 
     const monthOptions: JSX.Element[] = [];
     monthOptions.push(
-      <option value={-1} key={-1} disabled selected className={optionClass}>
-        {placeholder ? placeholder : ""}
+      <option
+        value={-1}
+        key={-1}
+        disabled
+        selected
+        className={className?.option}
+        style={styles?.option}
+      >
+        {placeholder ? placeholder : ''}
       </option>
     );
     months.forEach((month, index) => {
       monthOptions.push(
-        <option value={index + 1} key={index} className={optionClass}>
+        <option
+          value={index + 1}
+          key={index}
+          className={className?.option}
+          style={styles?.option}
+        >
           {month}
         </option>
       );
@@ -46,7 +90,8 @@ const MonthPicker: React.FC<IMonthPicker> = ({
 
   return (
     <select
-      className={selectClass}
+      className={className?.select}
+      style={styles?.select}
       onChange={(e: any) => {
         onMonthChange(e.target.value);
       }}

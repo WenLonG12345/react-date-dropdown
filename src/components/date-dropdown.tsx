@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
-import DayPicker from "./day-picker";
-import { zeroPad } from "./utils";
-import MonthPicker from "./month-picker";
-import YearPicker from "./year-picker";
+import React, { useEffect, useState } from 'react';
+import DayPicker from './day-picker';
+import { zeroPad } from './utils';
+import MonthPicker from './month-picker';
+import YearPicker from './year-picker';
 
 export interface IDateDropdown {
   /** Required. Callback for date change: Format: YYYY-MM-DD */
@@ -10,12 +10,18 @@ export interface IDateDropdown {
   /** Default date: Format: YYYY-MM-DD */
   defaultDate?: string;
 
-  /** styles for container */
-  containerClass?: string;
-  /** className for <option/> */
-  optionClass?: string;
-  /** className for <select/> */
-  selectClass?: string;
+  /** ClassName */
+  className?: {
+    container?: string;
+    select?: string;
+    option?: string;
+  };
+  /** Styles */
+  styles?: {
+    container?: React.CSSProperties;
+    select?: React.CSSProperties;
+    option?: React.CSSProperties;
+  };
 
   /** Placeholder for <select/> input */
   selectPlaceholder?: {
@@ -27,18 +33,23 @@ export interface IDateDropdown {
   yearStart?: number;
   /** Ending year: Format: YYYY */
   yearEnd?: number;
-}
 
+  /** Language for Month Strings. Default: EN */
+  language?: 'EN' | 'CN' | 'BM';
+  /** array of Month Strings, starting from Jan to Dec. limited to 12 string only */
+  arrayMonthList?: string[];
+}
 
 const DateDropdown: React.FC<IDateDropdown> = ({
   onDateChange,
   defaultDate,
-  optionClass,
-  selectClass,
-  containerClass,
+  className,
+  styles,
   selectPlaceholder,
   yearStart,
   yearEnd,
+  language,
+  arrayMonthList,
 }) => {
   const selDate = defaultDate ? new Date(defaultDate) : null;
 
@@ -68,12 +79,12 @@ const DateDropdown: React.FC<IDateDropdown> = ({
   }, [selectedDay, selectedMonth, selectedYear]);
 
   return (
-    <div className={containerClass}>
+    <div className={className?.container}>
       <YearPicker
         selectedYear={selectedYear}
         onYearChange={setSelectedYear}
-        selectClass={selectClass}
-        optionClass={optionClass}
+        className={className}
+        styles={styles}
         placeholder={selectPlaceholder?.year}
         start={yearStart}
         end={yearEnd}
@@ -81,17 +92,19 @@ const DateDropdown: React.FC<IDateDropdown> = ({
       <MonthPicker
         selectedMonth={selectedMonth}
         onMonthChange={setSelectedMonth}
-        selectClass={selectClass}
-        optionClass={optionClass}
+        className={className}
+        styles={styles}
         placeholder={selectPlaceholder?.month}
+        language={language}
+        arrayMonthList={arrayMonthList}
       />
       <DayPicker
         year={selectedYear}
         month={selectedMonth}
         day={selectedDay}
         onDayChange={setSelectedDay}
-        selectClass={selectClass}
-        optionClass={optionClass}
+        className={className}
+        styles={styles}
         placeholder={selectPlaceholder?.day}
       />
     </div>

@@ -18,23 +18,20 @@ export const Default: StoryObj<typeof DateDropdown> = {
       type: 'string',
       description: 'Default date: Format: YYYY-MM-DD',
     },
-    containerClass: {
-      type: 'string',
-      description: 'className for container',
-    },
-    optionClass: {
-      type: 'string',
-      description: 'className for container',
-    },
-    selectClass: {
-      type: 'string',
-      description: 'className for container',
-    },
     selectPlaceholder: {
       control: 'object',
-      description: 'Placeholder for select input'
+      description: 'Placeholder for select input',
     },
     yearStart: { type: 'number' },
     yearEnd: { type: 'number' },
+    language: {
+      options: ['EN', 'CN', 'BM'],
+      control: { type: 'select' },
+      description: 'Language for Month Strings',
+    },
+    arrayMonthList: {
+      control: 'text',
+      description: 'Language for Month Strings',
+    },
   },
 };

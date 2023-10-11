@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 export interface IYearPicker {
   /** Required. Callback for year change: Format: YYYY */
@@ -11,21 +11,26 @@ export interface IYearPicker {
   start?: number;
   /** Ending year: Format: YYYY */
   end?: number;
-  /** className for <select/> */
-  selectClass?: string;
-  /** className for <option/> */
-  optionClass?: string;
+  /** ClassName */
+  className?: {
+    select?: string;
+    option?: string;
+  };
+  /** Styles */
+  styles?: {
+    select?: React.CSSProperties;
+    option?: React.CSSProperties;
+  };
 }
-
 
 const YearPicker: React.FC<IYearPicker> = ({
   selectedYear,
   onYearChange,
-  placeholder = "YY",
+  placeholder = 'YY',
   start,
   end,
-  selectClass,
-  optionClass,
+  className,
+  styles,
 }) => {
   const renderYearOptions = () => {
     const startYear = start || 1900;
@@ -47,13 +52,25 @@ const YearPicker: React.FC<IYearPicker> = ({
 
     const yearOptions: JSX.Element[] = [];
     yearOptions.push(
-      <option value={-1} key={-1} disabled selected className={optionClass}>
-        {placeholder ? placeholder : ""}
+      <option
+        value={-1}
+        key={-1}
+        disabled
+        selected
+        className={className?.option}
+        style={styles?.option}
+      >
+        {placeholder ? placeholder : ''}
       </option>
     );
     years.forEach((year, index) => {
       yearOptions.push(
-        <option value={year} key={index} className={optionClass}>
+        <option
+          value={year}
+          key={index}
+          className={className?.option}
+          style={styles?.option}
+        >
           {year}
         </option>
       );
@@ -63,7 +80,8 @@ const YearPicker: React.FC<IYearPicker> = ({
 
   return (
     <select
-      className={selectClass}
+      className={className?.select}
+      style={styles?.select}
       onChange={(e: any) => onYearChange(e.target.value)}
       value={selectedYear}
     >

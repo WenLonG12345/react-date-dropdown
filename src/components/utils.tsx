@@ -1,4 +1,4 @@
-export const monthByNumber = [
+export const monthByNumber_EN = [
   "January",
   "February",
   "March",
@@ -13,26 +13,35 @@ export const monthByNumber = [
   "December",
 ];
 
-export const numberByMonth = {
-  January: 0,
-  February: 1,
-  March: 2,
-  April: 3,
-  May: 4,
-  June: 5,
-  July: 6,
-  August: 7,
-  September: 8,
-  October: 9,
-  November: 10,
-  December: 11,
-};
+export const monthByNumber_CN = [
+  '一月',
+  '二月',
+  '三月',
+  '四月',
+  '五月',
+  '六月',
+  '七月',
+  '八月',
+  '九月',
+  '十月',
+  '十一月',
+  '十二月',
+];
 
-export const unit = {
-  day: "day",
-  month: "month",
-  year: "year",
-};
+export const monthByNumber_BM = [
+  'Januari',
+  'Februari',
+  'Mac',
+  'April',
+  'Mei',
+  'Jun',
+  'Julai',
+  'Ogos',
+  'September',
+  'Oktober',
+  'November',
+  'Disember',
+];
 
 export const getDaysInMonth = (year: number, month: number): number => {
   year = +year;

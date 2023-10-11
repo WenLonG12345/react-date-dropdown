@@ -13,8 +13,8 @@ export const Default: StoryObj<typeof DayPicker> = {
     placeholder: 'DD',
   },
   argTypes: {
-    selectStyle: {control: 'object', description: 'style for <select/>'},
-    optionStyle: {control: 'object', description: 'style for <option/>'},
+    // selectStyle: {control: 'object', description: 'style for <select/>'},
+    // optionStyle: {control: 'object', description: 'style for <option/>'},
     year: {control: 'number', defaultValue: '1991', description: "Default year - 1991. Used to calculate number of days"},
   }
 };

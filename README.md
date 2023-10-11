@@ -15,19 +15,25 @@ yarn add react-date-dropdown
 ---
 
 #### DateDropdown
-```js
+```ts
 interface IDateDropdown {
   /** Required. Callback for date change: Format: YYYY-MM-DD */
   onDateChange: (date: string) => void;
   /** Default Date set: Format: YYYY-MM-DD */
   defaultDate?: string;
 
-  /** className for container */
-  containerClass?: string;
-  /** className for <option/> */
-  optionClass?: string;
-  /** className for <select/> */
-  selectClass?: string;
+  /** ClassName */
+  className?: {
+    container?: string;
+    select?: string;
+    option?: string;
+  };
+  /** Styles */
+  styles?: {
+    container?: React.CSSProperties;
+    select?: React.CSSProperties;
+    option?: React.CSSProperties;
+  };
 
   /** Placeholder for <select/> input */
   selectPlaceholder?: {
@@ -43,12 +49,10 @@ interface IDateDropdown {
 
 import DateDropdownPicker from 'react-date-dropdown';
 
-<DateDropdown
-  onDateChange={() => {}}
-/>
+<DateDr
 ```
 #### YearPicker
-```js
+```ts
 interface IYearPicker {
   /** Required. Callback for year change: Format: YYYY */
   onYearChange: (year: number) => void;
@@ -60,10 +64,16 @@ interface IYearPicker {
   start?: number;
   /** Ending year: Format: YYYY */
   end?: number;
-  /** className for <select/> */
-  selectClass?: string;
-  /** className for <option/> */
-  optionClass?: string;
+  /** ClassName */
+  className?: {
+    select?: string;
+    option?: string;
+  };
+  /** Styles */
+  styles?: {
+    select?: React.CSSProperties;
+    option?: React.CSSProperties;
+  };
 }
 
 import {YearPicker} from 'react-date-dropdown';
@@ -74,7 +84,7 @@ import {YearPicker} from 'react-date-dropdown';
 ```
 
 #### MonthPicker
-```js
+```ts
 interface IMonthPicker {
   /** Required. Callback for month change: Format: MM */
   onMonthChange: (month: number) => void;
@@ -82,10 +92,16 @@ interface IMonthPicker {
   selectedMonth?: number;
   /** Placeholder for <select/> input */
   placeholder?: string;
-  /** className for <select/> */
-  selectClass?: string;
-  /** className for <option/> */
-  optionClass?: string;
+  /** ClassName */
+  className?: {
+    select?: string;
+    option?: string;
+  };
+  /** Styles */
+  styles?: {
+    select?: React.CSSProperties;
+    option?: React.CSSProperties;
+  };
 }
 
 import {MonthPicker} from 'react-date-dropdown';
@@ -96,7 +112,7 @@ import {MonthPicker} from 'react-date-dropdown';
 ```
 
 #### DayPicker
-```js
+```ts
 interface IDayPicker {
   /** Required. Callback for day change: Format: DD */
   onDayChange: (day: number) => void;
@@ -108,10 +124,16 @@ interface IDayPicker {
   day?: number;
   /** Placeholder for <select/> input */
   placeholder?: string;
-  /** className for <select/> */
-  selectClass?: string;
-  /** className for <option/> */
-  optionClass?: string;
+  /** ClassName */
+  className?: {
+    select?: string;
+    option?: string;
+  };
+  /** Styles */
+  styles?: {
+    select?: React.CSSProperties;
+    option?: React.CSSProperties;
+  };
 }
 
 import {DayPicker} from 'react-date-dropdown';
