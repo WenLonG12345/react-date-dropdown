@@ -1,6 +1,6 @@
 {
   "name": "react-date-dropdown",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "main": "dist/react-date-dropdown.mjs",
   "module": "dist/react-date-dropdown.umd.js",
   "exports": {
